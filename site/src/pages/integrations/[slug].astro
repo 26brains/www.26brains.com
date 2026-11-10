@@ -10,31 +10,31 @@ export function getStaticPaths() {
 }
 
 const { integration } = Astro.props as { integration: Integration };
-const link = 'text-[#2B2B2B] underline decoration-[#B5B5B5] underline-offset-4 hover:decoration-[#2B2B2B] transition-colors';
+const link = 'text-[#23233F] underline decoration-[#B9B9D0] underline-offset-4 hover:decoration-[#23233F] transition-colors';
 ---
 <Base title={`${integration.name} Integrations — 26 Brains`} description={integration.description}>
 
   <div class="max-w-lg">
-    <p class="font-[family-name:var(--font-sans)] text-sm text-[#737373] mb-6">
+    <p class="font-[family-name:var(--font-sans)] text-sm text-[#6B6B80] mb-6">
       <a href="/integrations" class={link}>Integrations</a> / {integration.name}
     </p>
-    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2B2B2B] mb-6">{integration.name} integrations</h1>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#23233F] mb-6">{integration.name} integrations</h1>
     {integration.intro.map((para, i) => (
-      <p class={i === 0 ? 'text-lg leading-relaxed text-[#2B2B2B]' : 'mt-4 leading-relaxed text-[#2B2B2B]'}>{para}</p>
+      <p class={i === 0 ? 'text-lg leading-relaxed text-[#23233F]' : 'mt-4 leading-relaxed text-[#23233F]'}>{para}</p>
     ))}
   </div>
 
   <div class="mt-16 space-y-12">
     {integration.sections.map(({ title, body }) => (
-      <div class="border-t border-[#E4E4E4] pt-10">
-        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#2B2B2B] mb-3">{title}</h2>
-        <p class="leading-relaxed text-[#2B2B2B] max-w-lg">{body}</p>
+      <div class="border-t border-[#E4E4EC] pt-10">
+        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#23233F] mb-3">{title}</h2>
+        <p class="leading-relaxed text-[#23233F] max-w-lg">{body}</p>
       </div>
     ))}
 
-    <div class="border-t border-[#E4E4E4] pt-10">
-      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#2B2B2B] mb-3">✉️ Contact</h2>
-      <p class="leading-relaxed text-[#2B2B2B] max-w-lg">Tell us what you're trying to connect. We'll scope what's possible.</p>
+    <div class="border-t border-[#E4E4EC] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#23233F] mb-3">✉️ Contact</h2>
+      <p class="leading-relaxed text-[#23233F] max-w-lg">Tell us what you're trying to connect. We'll scope what's possible.</p>
       <a href="/#contact" class={`font-[family-name:var(--font-sans)] inline-block mt-4 ${link}`}>Get in touch →</a>
     </div>
   </div>

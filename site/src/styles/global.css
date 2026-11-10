@@ -5,17 +5,17 @@
   --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 
-  --color-ink:    #2B2B2B;
-  --color-paper:  #FAFAFA;
-  --color-accent: #555555;
-  --color-muted:  #737373;
-  --color-rule:   #E4E4E4;
-  --color-nav:    #FAFAFA;
+  --color-ink:    #23233F;
+  --color-paper:  #FAFAFC;
+  --color-accent: #3D3D7A;
+  --color-muted:  #6B6B80;
+  --color-rule:   #E4E4EC;
+  --color-nav:    #FAFAFC;
 }
 
 html {
-  background-color: #FAFAFA;
-  color: #2B2B2B;
+  background-color: #FAFAFC;
+  color: #23233F;
   font-size: 18px;
 }
 
@@ -27,12 +27,12 @@ body {
 .prose :where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-sans);
   font-weight: 600;
-  color: #2B2B2B;
+  color: #23233F;
 }
 
 .prose :where(code):not(:where(pre *)) {
   font-size: 0.875em;
-  background: #F0F0F0;
+  background: #F0F0F5;
   padding: 0.15em 0.35em;
   border-radius: 3px;
   font-weight: 400;
@@ -45,5 +45,5 @@ body {
 
 /* Shiki sets background via inline style, so !important is needed to override */
 .prose pre {
-  background-color: #F0F0F0 !important;
+  background-color: #F0F0F5 !important;
 }

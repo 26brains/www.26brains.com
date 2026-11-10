@@ -2,55 +2,55 @@
 import Base from '../../layouts/Base.astro';
 import { integrations } from '../../data/integrations';
 
-const sectionTitle = 'font-[family-name:var(--font-sans)] font-600 text-lg text-[#2B2B2B] mb-3';
-const link = 'text-[#2B2B2B] underline decoration-[#B5B5B5] underline-offset-4 hover:decoration-[#2B2B2B] transition-colors';
+const sectionTitle = 'font-[family-name:var(--font-sans)] font-600 text-lg text-[#23233F] mb-3';
+const link = 'text-[#23233F] underline decoration-[#B9B9D0] underline-offset-4 hover:decoration-[#23233F] transition-colors';
 ---
 <Base title="Integrations — 26 Brains" description="Custom integrations between business systems. Connect the tools you already use so data moves between them automatically.">
 
   <div class="max-w-lg">
-    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2B2B2B] mb-6">🔌 Integrations</h1>
-    <p class="text-lg leading-relaxed text-[#2B2B2B]">
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#23233F] mb-6">🔌 Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#23233F]">
       Most businesses run on a handful of tools that don't talk to each other. The same data lives in several places, people move it between them by hand, and things get missed.
     </p>
-    <p class="mt-4 leading-relaxed text-[#2B2B2B]">
+    <p class="mt-4 leading-relaxed text-[#23233F]">
       Integrations connect those systems so data moves where it needs to, automatically.
     </p>
   </div>
 
   <div class="mt-16 space-y-12">
 
-    <div class="border-t border-[#E4E4E4] pt-10">
+    <div class="border-t border-[#E4E4EC] pt-10">
       <h2 class={sectionTitle}>What we build</h2>
-      <p class="leading-relaxed text-[#2B2B2B] max-w-lg">Integrations between the tools you already use — CRMs, accounting packages, booking and rental systems, inventory, scheduling and communication platforms.</p>
+      <p class="leading-relaxed text-[#23233F] max-w-lg">Integrations between the tools you already use — CRMs, accounting packages, booking and rental systems, inventory, scheduling and communication platforms.</p>
     </div>
 
-    <div class="border-t border-[#E4E4E4] pt-10">
+    <div class="border-t border-[#E4E4EC] pt-10">
       <h2 class={sectionTitle}>Why custom?</h2>
-      <p class="leading-relaxed text-[#2B2B2B] max-w-lg">Off-the-shelf connectors handle simple cases. Anything specific to your data model, your workflow or your edge cases needs something built to fit.</p>
-      <p class="mt-3 leading-relaxed text-[#2B2B2B] max-w-lg">You own the code rather than renting a connector, and there is no third-party middleware that can go down or change its pricing.</p>
+      <p class="leading-relaxed text-[#23233F] max-w-lg">Off-the-shelf connectors handle simple cases. Anything specific to your data model, your workflow or your edge cases needs something built to fit.</p>
+      <p class="mt-3 leading-relaxed text-[#23233F] max-w-lg">You own the code rather than renting a connector, and there is no third-party middleware that can go down or change its pricing.</p>
     </div>
 
-    <div class="border-t border-[#E4E4E4] pt-10">
+    <div class="border-t border-[#E4E4EC] pt-10">
       <h2 class={sectionTitle}>Who this is for</h2>
-      <p class="leading-relaxed text-[#2B2B2B] max-w-lg">Businesses that have outgrown manual processes. If your team is copying data between systems, re-entering information or reconciling records by hand, that time does not need to be spent.</p>
+      <p class="leading-relaxed text-[#23233F] max-w-lg">Businesses that have outgrown manual processes. If your team is copying data between systems, re-entering information or reconciling records by hand, that time does not need to be spent.</p>
     </div>
 
-    <div class="border-t border-[#E4E4E4] pt-10">
-      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#2B2B2B] mb-4">Systems we work with</h2>
+    <div class="border-t border-[#E4E4EC] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#23233F] mb-4">Systems we work with</h2>
       <ul class="space-y-2">
         {integrations.map(({ slug, name, summary }) => (
           <li class="flex flex-col sm:flex-row sm:items-baseline gap-0 sm:gap-3">
             <a href={`/integrations/${slug}`} class={`font-[family-name:var(--font-sans)] font-500 ${link}`}>{name}</a>
-            <span class="font-[family-name:var(--font-sans)] text-sm text-[#737373]">{summary}</span>
+            <span class="font-[family-name:var(--font-sans)] text-sm text-[#6B6B80]">{summary}</span>
           </li>
         ))}
       </ul>
-      <p class="mt-4 leading-relaxed text-[#2B2B2B] max-w-lg">Plus most other systems with a usable API.</p>
+      <p class="mt-4 leading-relaxed text-[#23233F] max-w-lg">Plus most other systems with a usable API.</p>
     </div>
 
-    <div class="border-t border-[#E4E4E4] pt-10">
+    <div class="border-t border-[#E4E4EC] pt-10">
       <h2 class={sectionTitle}>✉️ Contact</h2>
-      <p class="leading-relaxed text-[#2B2B2B] max-w-lg">Tell us which systems you run and where the friction is. We'll tell you what's possible.</p>
+      <p class="leading-relaxed text-[#23233F] max-w-lg">Tell us which systems you run and where the friction is. We'll tell you what's possible.</p>
       <a href="/#contact" class={`font-[family-name:var(--font-sans)] inline-block mt-4 ${link}`}>Get in touch →</a>
     </div>
 

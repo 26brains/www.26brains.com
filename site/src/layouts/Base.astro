@@ -15,7 +15,8 @@ const ogDescription = description ?? '26 Brains builds integrations and custom s
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta name="description" content={ogDescription} />
@@ -38,12 +39,15 @@ const ogDescription = description ?? '26 Brains builds integrations and custom s
   </head>
   <body class="min-h-screen flex flex-col">
 
-    <header class="bg-[#FAFAFA] border-b border-[#E4E4E4]">
+    <header class="bg-[#FAFAFC] border-b border-[#E4E4EC]">
       <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center">
-        <a href="/" class="font-[family-name:var(--font-sans)] font-600 text-[#2B2B2B] text-lg tracking-tight no-underline mr-auto hover:opacity-75 transition-opacity">26 Brains</a>
+        <a href="/" class="flex items-center gap-2.5 font-[family-name:var(--font-sans)] font-600 text-[#191946] text-lg tracking-tight no-underline mr-auto hover:opacity-75 transition-opacity">
+          <img src="/logo.png" alt="" width="36" height="36" class="w-9 h-9" />
+          26 Brains
+        </a>
         <div class="flex items-center gap-6 sm:gap-8">
-          <a href="/integrations" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2B2B2B] hover:text-[#555555] transition-colors no-underline">🔌 Integrations</a>
-          <a href="/#contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2B2B2B] hover:text-[#555555] transition-colors no-underline">✉️ Contact</a>
+          <a href="/integrations" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#23233F] hover:text-[#3D3D7A] transition-colors no-underline">🔌 Integrations</a>
+          <a href="/#contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#23233F] hover:text-[#3D3D7A] transition-colors no-underline">✉️ Contact</a>
         </div>
       </nav>
     </header>
@@ -52,12 +56,12 @@ const ogDescription = description ?? '26 Brains builds integrations and custom s
       <slot />
     </main>
 
-    <footer class="border-t border-[#E4E4E4] mt-auto">
+    <footer class="border-t border-[#E4E4EC] mt-auto">
       <div class="max-w-3xl mx-auto px-6 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <span class="font-[family-name:var(--font-sans)] text-sm text-[#737373]">© {new Date().getFullYear()} 26 Brains Ltd · Registered in England and Wales, company no. 14800970</span>
+        <span class="font-[family-name:var(--font-sans)] text-sm text-[#6B6B80]">© {new Date().getFullYear()} 26 Brains Ltd · Registered in England and Wales, company no. 14800970</span>
         <div class="flex items-center gap-6">
-          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#737373] hover:text-[#2B2B2B] transition-colors no-underline">YouTube</a>
-          <a href="https://github.com/26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#737373] hover:text-[#2B2B2B] transition-colors no-underline">GitHub</a>
+          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#6B6B80] hover:text-[#23233F] transition-colors no-underline">YouTube</a>
+          <a href="https://github.com/26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#6B6B80] hover:text-[#23233F] transition-colors no-underline">GitHub</a>
         </div>
       </div>
     </footer>
