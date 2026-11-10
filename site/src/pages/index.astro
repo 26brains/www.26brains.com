@@ -21,10 +21,10 @@ const services = [
 ];
 
 const systems = [
-  { label: 'AWS', desc: 'Lambda, ECS, SQS, SNS, DynamoDB, RDS and the rest of the stack' },
-  { label: 'Current RMS', desc: 'Rental and events management' },
-  { label: 'Maxoptra', desc: 'Route planning and delivery' },
-  { label: 'Pipedrive', desc: 'CRM and sales pipeline' },
+  { label: 'AWS', desc: 'Lambda, ECS, SQS, SNS, DynamoDB, RDS and the rest of the stack', href: undefined },
+  { label: 'Current RMS', desc: 'Rental and events management', href: '/integrations/current-rms' },
+  { label: 'Maxoptra', desc: 'Route planning and delivery', href: '/integrations/maxoptra' },
+  { label: 'Pipedrive', desc: 'CRM and sales pipeline', href: '/integrations/pipedrive' },
 ];
 
 const inputClass = 'w-full px-4 py-3 border border-[#E4E4E4] rounded-none bg-white text-[#2B2B2B] font-[family-name:var(--font-sans)] text-sm focus:outline-none focus:border-[#555555] transition-colors';
@@ -57,13 +57,18 @@ const labelClass = 'font-[family-name:var(--font-sans)] text-sm font-500 text-[#
   <section class="mb-16">
     <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#737373] mb-6">🔌 Specialist platforms</h2>
     <ul class="space-y-2">
-      {systems.map(({ label, desc }) => (
+      {systems.map(({ label, desc, href }) => (
         <li class="flex flex-col sm:flex-row sm:items-baseline gap-0 sm:gap-3">
-          <span class="font-[family-name:var(--font-sans)] font-500 text-[#2B2B2B]">{label}</span>
+          {href
+            ? <a href={href} class="font-[family-name:var(--font-sans)] font-500 text-[#2B2B2B] underline decoration-[#B5B5B5] underline-offset-4 hover:decoration-[#2B2B2B] transition-colors">{label}</a>
+            : <span class="font-[family-name:var(--font-sans)] font-500 text-[#2B2B2B]">{label}</span>}
           <span class="font-[family-name:var(--font-sans)] text-sm text-[#737373]">{desc}</span>
         </li>
       ))}
     </ul>
+    <div class="mt-8">
+      <a href="/integrations" class="font-[family-name:var(--font-sans)] text-sm text-[#2B2B2B] underline decoration-[#B5B5B5] underline-offset-4 hover:decoration-[#2B2B2B] transition-colors">All integrations →</a>
+    </div>
   </section>
 
   <section id="contact" class="max-w-lg scroll-mt-8">
