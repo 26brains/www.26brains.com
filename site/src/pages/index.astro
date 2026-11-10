@@ -27,51 +27,51 @@ const systems = [
   { label: 'Pipedrive', desc: 'CRM and sales pipeline' },
 ];
 
-const inputClass = 'w-full px-4 py-3 border border-[#E6DFD0] rounded-none bg-white text-[#2A2520] font-[family-name:var(--font-sans)] text-sm focus:outline-none focus:border-[#A87820] transition-colors';
-const labelClass = 'font-[family-name:var(--font-sans)] text-sm font-500 text-[#2A2520] block mb-2';
+const inputClass = 'w-full px-4 py-3 border border-[#E4E4E4] rounded-none bg-white text-[#2B2B2B] font-[family-name:var(--font-sans)] text-sm focus:outline-none focus:border-[#555555] transition-colors';
+const labelClass = 'font-[family-name:var(--font-sans)] text-sm font-500 text-[#2B2B2B] block mb-2';
 ---
 <Base title="26 Brains — Integrations and Custom Software Development">
 
   <section class="mb-16">
-    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2A2520] mb-6">Integrations and custom software.</h1>
-    <p class="text-xl leading-relaxed text-[#2A2520] max-w-lg">
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2B2B2B] mb-6">Integrations and custom software.</h1>
+    <p class="text-xl leading-relaxed text-[#2B2B2B] max-w-lg">
       26 Brains builds the software that sits between business systems — integrations, backend services and AI workflows that keep data where it needs to be.
     </p>
-    <p class="mt-4 text-xl leading-relaxed text-[#2A2520] max-w-lg">
+    <p class="mt-4 text-xl leading-relaxed text-[#2B2B2B] max-w-lg">
       If your team is re-entering data, chasing updates between tools, or working around gaps in the systems you depend on, that is the problem we fix.
     </p>
   </section>
 
   <section class="mb-16">
-    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">🛠️ What we do</h2>
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#737373] mb-6">🛠️ What we do</h2>
     <div class="space-y-0">
       {services.map(({ title, desc }) => (
-        <div class="border-t border-[#E6DFD0] py-6">
-          <h3 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#2A2520] mb-2">{title}</h3>
-          <p class="leading-relaxed text-[#2A2520] max-w-lg">{desc}</p>
+        <div class="border-t border-[#E4E4E4] py-6">
+          <h3 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#2B2B2B] mb-2">{title}</h3>
+          <p class="leading-relaxed text-[#2B2B2B] max-w-lg">{desc}</p>
         </div>
       ))}
     </div>
   </section>
 
   <section class="mb-16">
-    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">🔌 Specialist platforms</h2>
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#737373] mb-6">🔌 Specialist platforms</h2>
     <ul class="space-y-2">
       {systems.map(({ label, desc }) => (
         <li class="flex flex-col sm:flex-row sm:items-baseline gap-0 sm:gap-3">
-          <span class="font-[family-name:var(--font-sans)] font-500 text-[#A87820]">{label}</span>
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">{desc}</span>
+          <span class="font-[family-name:var(--font-sans)] font-500 text-[#2B2B2B]">{label}</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#737373]">{desc}</span>
         </li>
       ))}
     </ul>
-    <p class="mt-6 leading-relaxed text-[#2A2520] max-w-lg">
-      Plus most other systems with a usable API. Writing on integration work is at <a href="https://www.dh7.dev/blog" class="text-[#A87820] hover:underline">dh7.dev</a>.
+    <p class="mt-6 leading-relaxed text-[#2B2B2B] max-w-lg">
+      Plus most other systems with a usable API. Writing on integration work is at <a href="https://www.dh7.dev/blog" class="text-[#2B2B2B] underline decoration-[#B5B5B5] underline-offset-4 hover:decoration-[#2B2B2B] transition-colors">dh7.dev</a>.
     </p>
   </section>
 
   <section id="contact" class="max-w-lg scroll-mt-8">
-    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">✉️ Contact</h2>
-    <p class="leading-relaxed text-[#2A2520] mb-10">
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#737373] mb-6">✉️ Contact</h2>
+    <p class="leading-relaxed text-[#2B2B2B] mb-10">
       Tell us which systems you run and where the friction is. We'll tell you what's possible.
     </p>
 
@@ -91,7 +91,7 @@ const labelClass = 'font-[family-name:var(--font-sans)] text-sm font-500 text-[#
       </div>
 
       <div>
-        <label for="company" class={labelClass}>Company <span class="text-[#7A7068] font-400">(optional)</span></label>
+        <label for="company" class={labelClass}>Company <span class="text-[#737373] font-400">(optional)</span></label>
         <input type="text" id="company" name="company" autocomplete="organization" class={inputClass} />
       </div>
 
@@ -102,7 +102,7 @@ const labelClass = 'font-[family-name:var(--font-sans)] text-sm font-500 text-[#
 
       <button
         type="submit"
-        class="font-[family-name:var(--font-sans)] text-sm font-500 bg-[#2A2520] text-[#FDFBF4] px-6 py-3 hover:bg-[#A87820] transition-colors cursor-pointer border-0"
+        class="font-[family-name:var(--font-sans)] text-sm font-500 bg-[#2B2B2B] text-[#FAFAFA] px-6 py-3 hover:bg-[#555555] transition-colors cursor-pointer border-0"
       >
         Send message
       </button>
