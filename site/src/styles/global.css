@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+
+  --color-ink:    #2A2520;
+  --color-paper:  #FDFBF4;
+  --color-accent: #A87820;
+  --color-muted:  #7A7068;
+  --color-rule:   #E6DFD0;
+  --color-nav:    #FDFBF4;
+}
+
+html {
+  background-color: #FDFBF4;
+  color: #2A2520;
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+/* Override prose to use our typefaces */
+.prose :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: #2A2520;
+}
+
+.prose :where(code):not(:where(pre *)) {
+  font-size: 0.875em;
+  background: #F0EDE4;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+.prose :where(code):not(:where(pre *))::before,
+.prose :where(code):not(:where(pre *))::after {
+  content: none;
+}
+
+/* Shiki sets background via inline style, so !important is needed to override */
+.prose pre {
+  background-color: #F0EDE4 !important;
+}

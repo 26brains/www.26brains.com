@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogDescription = description ?? '26 Brains builds integrations and custom software — AWS, Current RMS, Maxoptra, Pipedrive, REST and event-driven services, and AI workflows.';
+---
+<!doctype html>
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+    <meta name="description" content={ogDescription} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:site_name" content="26 Brains" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={ogDescription} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+
+    <header class="bg-[#FDFBF4] border-b border-[#E6DFD0]">
+      <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center">
+        <a href="/" class="font-[family-name:var(--font-sans)] font-600 text-[#A87820] text-lg tracking-tight no-underline mr-auto hover:opacity-75 transition-opacity">26 Brains</a>
+        <a href="/#contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">✉️ Contact</a>
+      </nav>
+    </header>
+
+    <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-12 md:py-16">
+      <slot />
+    </main>
+
+    <footer class="border-t border-[#E6DFD0] mt-auto">
+      <div class="max-w-3xl mx-auto px-6 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">© {new Date().getFullYear()} 26 Brains</span>
+        <div class="flex items-center gap-6">
+          <a href="https://www.dh7.dev" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">dh7.dev</a>
+          <a href="https://www.linkedin.com/in/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">LinkedIn</a>
+          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">YouTube</a>
+          <a href="https://github.com/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <Analytics />
+  </body>
+</html>
