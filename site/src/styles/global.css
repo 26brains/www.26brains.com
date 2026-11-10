@@ -3,7 +3,6 @@
 
 @theme {
   --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-serif: 'Lora', Georgia, serif;
 
   --color-ink:    #23233F;
   --color-paper:  #FAFAFC;
@@ -16,11 +15,11 @@
 html {
   background-color: #FAFAFC;
   color: #23233F;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 /* Override prose to use our typefaces */
